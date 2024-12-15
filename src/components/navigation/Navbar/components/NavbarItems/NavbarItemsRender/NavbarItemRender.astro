@@ -9,9 +9,9 @@ interface Props {
 const { links } = Astro.props;
 ---
 
-<div class="w-full md:block md:w-auto" id="navbar-default">
+<div class="hidden w-full md:block md:w-auto" id="navbar-default">
   <ul
-    class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
+    class="flex flex-col p-4 mt-4 font-medium rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
   >
     {links.map((link) => <NavbarItem link={link} />)}
   </ul>
