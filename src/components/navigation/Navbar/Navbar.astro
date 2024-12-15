@@ -1,0 +1,27 @@
+---
+import NavbarItemsRender from "@components/navigation/Navbar/components/NavbarItems/NavbarItemsRender/NavbarItemRender.astro";
+import ResponsiveButton from "@components/navigation/Navbar/components/ResponsiveButton/ResponsiveButton.astro";
+
+export type Link = {
+  href: string;
+  text: string;
+};
+
+export const links: Link[] = [
+  { href: "/", text: "Inicio" },
+  { href: "#nosotros", text: "Nosotros" },
+  { href: "#actividades", text: "Actividades" },
+  { href: "#directiva", text: "Directiva" },
+  { href: "#carrera", text: "Carrera" },
+  { href: "/otros", text: "Más" },
+];
+---
+
+<nav class="sticky top-0 z-50 bg-accent/30">
+  <div
+    class="flex flex-wrap items-center justify-between max-w-screen-xl p-6 mx-auto"
+  >
+    <ResponsiveButton />
+    <NavbarItemsRender links={links} />
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+---
+import type { Link } from "@components/navigation/Navbar/Navbar.astro";
+import NavbarItem from "@components/navigation/Navbar/components/NavbarItems/NavbarItem/NavbarItem.astro";
+
+interface Props {
+  links: Link[];
+}
+
+const { links } = Astro.props;
+---
+
+<div class="w-full md:block md:w-auto" id="navbar-default">
+  <ul
+    class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
+  >
+    {links.map((link) => <NavbarItem link={link} />)}
+  </ul>
+</div>
