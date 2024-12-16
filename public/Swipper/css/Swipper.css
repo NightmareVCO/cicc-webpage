@@ -7,13 +7,13 @@
 }
 
 .swiper-slide-active > div {
-  transform: scale(1.1);
+  transform: scale(1.15);
   transition: transform 1.5s ease;
   overflow-y: visible;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #00589B;
+  color: #00589b;
   padding: 10px;
 }

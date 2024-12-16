@@ -1,5 +1,5 @@
 ---
-import type { Activity } from "@src/components/_pages/homePage/activities/Activities.astro";
+import type { Activity } from "@components/_Pages/homePage/activities/Activities.astro";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -28,6 +28,8 @@ const ACTIVITY_LABEL = "Ver actividad";
       {
         activity.link && (
           <a
+            target="_blank"
+            rel="noopener noreferrer"
             href={activity.link}
             class="w-[90%] p-2 mt-9 mb-4 md:mb-0 text-xl font-medium text-center transition-all rounded-2xl bg-primary hover:scale-105 hover:bg-primary/90"
           >
