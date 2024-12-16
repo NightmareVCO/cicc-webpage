@@ -1,12 +1,27 @@
 ---
+import Layout from "@src/layouts/Layout.astro";
 import Hero from "@components/Hero/Hero.astro";
-import Layout from "../layouts/Layout.astro";
 import About from "@components/_pages/homePage/aboutUs/About.astro";
+import Activities from "@components/_pages/homePage/activities/Activities.astro";
+import ImageDivider from "@components/Divider/ImageDivider.astro";
+import Directive from "@components/_pages/homePage/directive/Directive.astro";
 ---
 
 <Layout>
   <Hero />
-  <div class="mt-[calc(75dvh)]">
+  <div
+    id="nosotros"
+    class="mt-[calc(70dvh)] md:mt-[calc(80dvh)] container mx-auto"
+  >
     <About />
+  </div>
+  <div class="mt-12 md:mt-28">
+    <ImageDivider imagePath="/src/assets/divider-banner.webp" alt="Divider" />
+  </div>
+  <div class="container mx-auto mt-10 md:mt-20">
+    <Activities />
+  </div>
+  <div class="container mx-auto mt-3">
+    <Directive />
   </div>
 </Layout>
