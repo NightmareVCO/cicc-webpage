@@ -10,6 +10,7 @@ export default {
 				'secondary': '#E9A900',
 				'accent': '#004376',
 				'accent-dark': '#001B30',
+				'accent-light': '#D3D3D3',
 				},
 			backgroundImage: {
 				'hero-image': "url('/hero.webp')",
