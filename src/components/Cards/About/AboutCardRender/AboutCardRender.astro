@@ -1,0 +1,23 @@
+---
+import AboutCard from "@components/Cards/About/AboutCard/AboutCard.astro";
+import type { Cards } from "@src/components/_pages/homePage/aboutUs/About.astro";
+
+interface Props {
+  cards: Cards;
+}
+
+const { cards } = Astro.props;
+---
+
+<div class="flex flex-wrap justify-center w-full p-4 gap-y-10">
+  {
+    cards.map((card) => (
+      <AboutCard
+        title={card.title}
+        text={card.description}
+        buttonText={card?.buttonText}
+        buttonLink={card?.buttonLink}
+      />
+    ))
+  }
+</div>
