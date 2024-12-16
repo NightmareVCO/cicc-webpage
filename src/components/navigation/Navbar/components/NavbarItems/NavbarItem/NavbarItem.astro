@@ -1,5 +1,5 @@
 ---
-import type { Link } from "@components/navigation/Navbar/Navbar.astro";
+import type { Link } from "@components/Navigation/Navbar/Navbar.astro";
 
 interface Props {
   link: Link;
@@ -20,3 +20,10 @@ const aClasses = isActive
     {link.text}
   </a>
 </li>
+<!-- <li class="">
+  <a id="link" href={link.href} class="">
+    {link.text}
+  </a>
+</li>
+
+<script src="/Navbar/js/NavbarItem.js" type="module" is:inline></script> -->

@@ -1,6 +1,6 @@
 ---
-import NavbarItemsRender from "@components/navigation/Navbar/components/NavbarItems/NavbarItemsRender/NavbarItemRender.astro";
-import ResponsiveButton from "@components/navigation/Navbar/components/ResponsiveButton/ResponsiveButton.astro";
+import NavbarItemsRender from "@components/Navigation/Navbar/components/NavbarItems/NavbarItemsRender/NavbarItemRender.astro";
+import ResponsiveButton from "@components/Navigation/Navbar/components/ResponsiveButton/ResponsiveButton.astro";
 
 export type Link = {
   href: string;
@@ -23,7 +23,8 @@ export const links: Link[] = [
   >
     <ResponsiveButton />
     <NavbarItemsRender links={links} />
+    <h2 class="font-medium md:hidden">CICC</h2>
   </div>
 </nav>
 
-<script src="/public/Navbar/js/Navbar.js" type="module" is:inline></script>
+<script src="/Navbar/js/Navbar.js" type="module" is:inline></script>
