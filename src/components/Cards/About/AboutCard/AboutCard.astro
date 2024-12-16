@@ -18,6 +18,8 @@ const { title, text, buttonText, buttonLink } = Astro.props;
     {
       buttonText && buttonLink && (
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           class="w-[90%] py-2 text-xl font-medium text-center transition-all rounded-full bg-secondary hover:scale-105 hover:bg-secondary/90"
           href={buttonLink}
         >
