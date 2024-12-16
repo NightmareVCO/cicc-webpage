@@ -1,0 +1,28 @@
+---
+import type { Activity } from "@components/_pages/homePage/activities/Activities.astro";
+import ActivityCard from "@components/Cards/Activities/ActivityCard/ActivityCard.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  activities: Activity[];
+}
+
+const { activities } = Astro.props;
+---
+
+<link rel="stylesheet" href="/public/Swipper/css/Swipper.css" />
+
+<div class="w-full h-full swiper">
+  <div class="swiper-wrapper">
+    {
+      activities.map((activity) => {
+        return <ActivityCard activity={activity} />;
+      })
+    }
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script type="module" src="/public/Swipper/js/Swipper.js"></script>

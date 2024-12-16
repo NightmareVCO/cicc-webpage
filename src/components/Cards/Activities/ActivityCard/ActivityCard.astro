@@ -1,0 +1,40 @@
+---
+import type { Activity } from "@src/components/_pages/homePage/activities/Activities.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  activity: Activity;
+}
+
+const { activity } = Astro.props;
+const ACTIVITY_LABEL = "Ver actividad";
+---
+
+<div class="swiper-slide">
+  <div class="flex items-center justify-center">
+    <div
+      class="flex drop-shadow-xl flex-col items-center min-h-40 w-64 md:min-h-[340px] md:min-w-[330px] rounded-3xl bg-accent-light"
+    >
+      <Image
+        class="w-56 m-4 md:w-[300px] h-44 rounded-2xl"
+        src={activity.image}
+        alt={activity.title}
+        width={300}
+        height={176}
+      />
+      <h2 class="mb-3 text-3xl font-semibold text-center md:mb-0 text-primary">
+        {activity.title}
+      </h2>
+      {
+        activity.link && (
+          <a
+            href={activity.link}
+            class="w-[90%] p-2 mt-9 mb-4 md:mb-0 text-xl font-medium text-center transition-all rounded-2xl bg-primary hover:scale-105 hover:bg-primary/90"
+          >
+            {ACTIVITY_LABEL}
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>

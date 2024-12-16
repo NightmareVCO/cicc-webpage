@@ -1,0 +1,47 @@
+---
+import Heading from "@components/Heading/Heading.astro";
+import ActivitiesCardRender from "@components/Cards/Activities/ActivitiesCardRender/ActivitiesCardRender.astro";
+
+export type Activity = {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+};
+
+export const activities: Activity[] = [
+  {
+    title: "Actividad 1",
+    description: "Descripción de la actividad 1",
+    image: "/public/divider-banner.webp",
+    link: "https://www.ucr.ac.cr/estudiantes/carreras/ciencias-de-la-computacion.html",
+  },
+  {
+    title: "Actividad 2",
+    description: "Descripción de la actividad 2",
+    image: "/public/divider-banner.webp",
+  },
+  {
+    title: "Actividad 3",
+    description: "Descripción de la actividad 3",
+    image: "/public/divider-banner.webp",
+    link: "https://www.ucr.ac.cr/estudiantes/carreras/ciencias-de-la-computacion.html",
+  },
+  {
+    title: "Actividad 4",
+    description: "Descripción de la actividad 4",
+    image: "/public/divider-banner.webp",
+  },
+  {
+    title: "Actividad 5",
+    description: "Descripción de la actividad 5",
+    image: "/public/divider-banner.webp",
+    link: "https://www.ucr.ac.cr/estudiantes/carreras/ciencias-de-la-computacion.html",
+  },
+];
+---
+
+<section>
+  <Heading text="Actividades" />
+  <ActivitiesCardRender activities={activities} />
+</section>
