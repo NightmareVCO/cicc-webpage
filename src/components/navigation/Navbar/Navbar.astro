@@ -17,7 +17,7 @@ export const links: Link[] = [
 ];
 ---
 
-<nav class="sticky top-0 z-50 bg-accent/30">
+<nav id="navbar" class="fixed top-0 z-50 w-dvw bg-accent/30">
   <div
     class="flex flex-wrap items-center justify-between max-w-screen-xl p-6 mx-auto"
   >
@@ -25,3 +25,5 @@ export const links: Link[] = [
     <NavbarItemsRender links={links} />
   </div>
 </nav>
+
+<script src="/public/Navbar/js/Navbar.js" type="module"></script>
