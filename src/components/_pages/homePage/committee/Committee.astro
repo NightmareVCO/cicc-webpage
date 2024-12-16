@@ -1,0 +1,15 @@
+---
+import Heading from "@src/components/Heading/Heading.astro";
+import { Image } from "astro:assets";
+---
+
+<section>
+  <Heading text="Comité" />
+  <Image
+    src="/hero.webp"
+    alt="Foto de los miembros del comité"
+    class="h-[calc(70vh)] w-full shadow-2xl drop-shadow-2xl rounded-3xl object-cover"
+    width={1920}
+    height={1080}
+  />
+</section>
