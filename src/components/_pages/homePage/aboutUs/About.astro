@@ -1,7 +1,39 @@
 ---
 import Heading from "@components/Heading/Heading.astro";
+import AboutCardRender from "@components/Cards/About/AboutCardRender/AboutCardRender.astro";
+import SemicolonIcon from "@icons/SemicolonIcon.astro";
+
+export const cards = [
+  {
+    title: "Misión",
+    description:
+      "Nuestra misión es brindar a los estudiantes de la carrera de ingeniería en ciencias de la computación una plataforma para su crecimiento profesional y personal. Ofreciendo actividades recreativas, proyectos prácticos y talleres para mejorar sus habilidades técnicas y de liderazgo, desarrollando así una red sólida de compañeros de campo.",
+  },
+  {
+    title: "Visión",
+    description:
+      "Nuestra misión es brindar a los estudiantes de la carrera de ingeniería en ciencias de la computación una plataforma para su crecimiento profesional y personal. Ofreciendo actividades recreativas, proyectos prácticos y talleres para mejorar sus habilidades técnicas y de liderazgo, desarrollando así una red sólida de compañeros de campo.",
+  },
+  {
+    title: "Carrera",
+    description:
+      "El ingeniero en Ciencias de la Computación posee bases sólidas de conocimiento sobre ingeniería de software, ciencias computacionales, desarrollo de sistemas, arquitectura de la información, infraestructura computacional y gestión de proyectos.",
+    buttonText: "Ver más",
+    buttonLink:
+      "https://www.ucr.ac.cr/estudiantes/carreras/ciencias-de-la-computacion.html",
+  },
+];
+
+export type Cards = typeof cards;
+export type Card = (typeof cards)[0];
 ---
 
-<section class="container mx-auto">
+<section class="relative">
   <Heading text="Nosotros" />
+
+  <AboutCardRender cards={cards} />
+
+  <div class="hidden md:block absolute bottom-[-60px] right-[-50px]">
+    <SemicolonIcon />
+  </div>
 </section>

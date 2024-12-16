@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  imagePath: string;
+  alt: string;
+}
+
+const { imagePath, alt } = Astro.props;
+---
+
+<div class="relative w-dvw max-h-[296px] bg-primary">
+  <Image
+    src={imagePath}
+    alt={alt}
+    class="top-0 left-0 w-full h-full opacity-25 min-h-40"
+    width={1920}
+    height={296}
+  />
+</div>

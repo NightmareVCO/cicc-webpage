@@ -9,15 +9,27 @@ import { Image } from "astro:assets";
     class="absolute inset-0 flex items-center justify-start bg-hero-gradient"
   >
     <h1
-      class="md:mt-32 text-5xl font-bold text-center text-white [text-shadow:_5px_6px_0_rgb(0_0_0_/_40%)] w-fit text-pretty md:text-6xl md:ml-10"
+      class="md:mt-32 text-5xl font-bold text-center text-white [text-shadow:_5px_6px_0_rgb(0_0_0_/_40%)] w-full md:w-fit text-pretty md:text-6xl md:ml-10"
     >
       <span class="text-secondary">COMITÉ</span> DE <br />
       INGENIERÍA EN <br /> CIENCIAS DE LA <br />
       <span class="text-secondary">COMPUTACIÓN</span>
     </h1>
     <div class="absolute flex items-center gap-x-6 bottom-4 right-4">
-      <Image src="/pucmm.webp" alt="Hero image" width={200} height={200} />
-      <Image src="/favicon.webp" alt="Hero image" width={200} height={200} />
+      <Image
+        src="/pucmm.webp"
+        alt="Hero image"
+        class="size-28 md:size-52"
+        width={200}
+        height={200}
+      />
+      <Image
+        src="/favicon.webp"
+        alt="Hero image"
+        class="size-28 md:size-52"
+        width={200}
+        height={200}
+      />
     </div>
   </div>
 </div>
