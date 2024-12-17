@@ -1,5 +1,6 @@
 ---
-import Navbar from "@components/navigation/Navbar/Navbar.astro";
+import Navbar from "@components/Navigation/Navbar/Navbar.astro";
+import Footer from "@components/Navigation/Footer/Footer.astro";
 import "@fontsource-variable/onest";
 ---
 
@@ -19,7 +20,9 @@ import "@fontsource-variable/onest";
     <main>
       <slot />
     </main>
-    <footer></footer>
+    <footer>
+      <Footer />
+    </footer>
   </body>
 </html>
 
