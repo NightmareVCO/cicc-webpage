@@ -30,7 +30,7 @@ export default function FAQR({ questions }: FAQProps) {
 
   return (
     <div>
-      {questions?.map((item, index) => {
+      {questions?.map((question, index) => {
         // Para abrir todas las preguntas
         // const isOpen = openIndexes.includes(index)
 
@@ -41,10 +41,10 @@ export default function FAQR({ questions }: FAQProps) {
             <h2 className="text-xl">
               <button
                 type="button"
-                className={`${index === 0 && "rounded-t-3xl"} border-b-0 flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3`}
+                className={`${index === 0 && "rounded-t-3xl"} ${index + 1 !== questions.length && "border-b-0"} flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3`}
                 onClick={() => toggleAccordion(index)}
               >
-                <span>{item.question}</span>
+                <span>{question.question}</span>
                 <svg
                   className={`size-3 mt-1 transform ${isOpen ? 'rotate-180' : ''}`}
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +62,8 @@ export default function FAQR({ questions }: FAQProps) {
               </button>
             </h2>
             {isOpen && (
-              <div className="p-5 border border-b-0 border-gray-200">
-                <p className="mb-2 text-black">{item.answer}</p>
+              <div className={`p-5 border ${index + 1 !== questions.length && "border-b-0"}  border-gray-200`}>
+                <p className="mb-2 text-black">{question.answer}</p>
               </div>
             )}
           </div>
