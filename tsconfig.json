@@ -15,7 +15,11 @@
       "@src/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@icons/*": ["src/components/Icons/*"],
-      "@config/*": ["src/config/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@data/*": ["src/data/*"],
+      "@config/*": ["src/config/*"],
+      "@type/*": ["src/data/types/*"],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

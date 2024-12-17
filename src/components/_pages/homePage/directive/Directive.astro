@@ -1,0 +1,17 @@
+---
+import Heading from "@components/Heading/Heading.astro";
+import DirectiveCardRender from "@components/Cards/Directive/DirectiveCardRender/DirectiveCardRender.astro";
+import type { Directive } from "@type/directive.type";
+
+interface Props {
+  title: string;
+  directive: Directive[];
+}
+
+const { title, directive } = Astro.props;
+---
+
+<section>
+  <Heading text={title} />
+  <DirectiveCardRender directives={directive} />
+</section>

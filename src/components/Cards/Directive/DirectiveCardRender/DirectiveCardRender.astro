@@ -1,0 +1,14 @@
+---
+import DirectiveCard from "../DirectiveCard/DirectiveCard.astro";
+import type { Directive } from "@components/_Pages/homePage/directive/Directive.astro";
+
+interface Props {
+  directives: Directive[];
+}
+
+const { directives } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+  {directives.map((member) => <DirectiveCard member={member} />)}
+</div>

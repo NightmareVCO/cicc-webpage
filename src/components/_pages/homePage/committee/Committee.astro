@@ -1,14 +1,21 @@
 ---
 import Heading from "@components/Heading/Heading.astro";
 import { Image } from "astro:assets";
+
+interface Props {
+  image: string;
+  title?: string;
+}
+
+const { image, title } = Astro.props;
 ---
 
 <section>
-  <Heading text="Comité" />
+  {title && <Heading text={title} />}
   <Image
-    src="/hero.webp"
+    src={image}
     alt="Foto de los miembros del comité"
-    class="h-[calc(35vh)] md:h-[calc(70vh)] w-full p-4 shadow-2xl drop-shadow-2xl rounded-3xl object-cover"
+    class="h-[calc(35vh)] md:h-[calc(70vh)] w-full p-4 shadow-2xl drop-shadow-2xl rounded-3xl object-cover border"
     width={1920}
     height={1080}
   />

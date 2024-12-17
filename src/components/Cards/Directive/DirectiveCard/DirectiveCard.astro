@@ -1,0 +1,39 @@
+---
+import type { Directive } from "@components/_Pages/homePage/directive/Directive.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  member: Directive;
+}
+
+const { member } = Astro.props;
+
+const PROFILE_LABEL = "Ver LinkedIn";
+---
+
+<div class="flex flex-col items-center p-4 border shadow-md rounded-2xl">
+  <div class="flex flex-col items-center min-h-[440px]">
+    <Image
+      src={member.image}
+      alt={member.name}
+      class="size-64 rounded-2xl"
+      width={200}
+      height={200}
+    />
+    <h3 class="mt-4 text-xl font-bold text-primary">{member.name}</h3>
+    <p class="font-semibold text-primary">{member.position}</p>
+    <p class="mt-2 text-center text-gray-700">{member.description}</p>
+  </div>
+  {
+    member.href && (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={member.href}
+        class="w-[90%] py-2 text-xl mt-2 font-medium text-center transition-transform rounded-full bg-secondary hover:scale-105 hover:bg-secondary/80"
+      >
+        <span class="text-lg font-semibold text-white">{PROFILE_LABEL}</span>
+      </a>
+    )
+  }
+</div>
