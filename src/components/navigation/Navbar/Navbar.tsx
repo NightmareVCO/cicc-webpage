@@ -15,14 +15,16 @@ export default function Navbar() {
       className="fixed top-0 z-50 w-dvw bg-accent md:bg-accent/30"
     >
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-6 mx-auto">
-        <img
-          src="/favicon.webp"
-          alt="Hero image"
-          className="size-12 md:size-52 md:hidden"
-          loading="lazy"
-          width={200}
-          height={200}
-        />
+        <a href="/#inicio">
+          <img
+            src="/favicon.webp"
+            alt="Hero image"
+            className="size-12 md:size-52 md:hidden"
+            loading="lazy"
+            width={200}
+            height={200}
+            />
+          </a>
         <ResponsiveButton isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
         <NavbarItemsRender links={links} isMenuOpen={isMenuOpen} />
       </div>
