@@ -15,8 +15,6 @@ export default function Navbar() {
       className="fixed top-0 z-50 w-dvw bg-accent md:bg-accent/30"
     >
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-6 mx-auto">
-        <ResponsiveButton isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-        <NavbarItemsRender links={links} isMenuOpen={isMenuOpen} />
         <img
           src="/favicon.webp"
           alt="Hero image"
@@ -25,6 +23,8 @@ export default function Navbar() {
           width={200}
           height={200}
         />
+        <ResponsiveButton isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+        <NavbarItemsRender links={links} isMenuOpen={isMenuOpen} />
       </div>
     </nav>
   );
