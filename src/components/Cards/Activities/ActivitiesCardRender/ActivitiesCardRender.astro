@@ -10,7 +10,27 @@ interface Props {
 const { activities } = Astro.props;
 ---
 
-<link rel="stylesheet" href="/Swipper/css/Swipper.css" />
+<style>
+  .swiper {
+    overflow-y: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 440px;
+  }
+
+  .swiper-slide-active > div {
+    transform: scale(1.15);
+    transition: transform 1.5s ease;
+    overflow-y: visible;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #00589b;
+    padding: 10px;
+  }
+</style>
 
 <div class="w-full h-full swiper">
   <div class="swiper-wrapper">
@@ -25,4 +45,34 @@ const { activities } = Astro.props;
   <div class="swiper-button-next"></div>
 </div>
 
-<script type="module" src="/public/Swipper/js/Swipper.js" is:inline></script>
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Autoplay } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation, Autoplay],
+
+    direction: "horizontal",
+    loop: true,
+    slidesPerView: 5,
+    autoplay: {
+      delay: 4000,
+    },
+    centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      1220: {
+        slidesPerView: 3,
+      },
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
