@@ -1,5 +1,5 @@
 ---
-import Navbar from "@components/Navigation/Navbar/Navbar.astro";
+import Navbar from "@components/Navigation/Navbar/Navbar";
 import Footer from "@components/Navigation/Footer/Footer.astro";
 import "@fontsource-variable/onest";
 import { ClientRouter } from "astro:transitions";
@@ -17,7 +17,7 @@ import { ClientRouter } from "astro:transitions";
   </head>
   <body class="relative">
     <header>
-      <Navbar />
+      <Navbar client:only />
     </header>
     <main>
       <slot />
