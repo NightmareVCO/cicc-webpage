@@ -2,16 +2,16 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  imagePath: string;
+  image: string;
   alt: string;
 }
 
-const { imagePath, alt } = Astro.props;
+const { image, alt } = Astro.props;
 ---
 
 <div class="relative w-dvw max-h-[296px] bg-primary">
   <Image
-    src={imagePath}
+    src={image}
     alt={alt}
     class="top-0 left-0 w-full h-full opacity-25 min-h-40"
     width={1920}
