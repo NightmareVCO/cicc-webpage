@@ -23,6 +23,10 @@ export const getStaticPaths = () => {
 };
 
 const { directive, image, year } = Astro.props;
+
+if (directive?.length === 0) {
+  Astro.redirect(404);
+}
 ---
 
 <Layout>
@@ -31,7 +35,7 @@ const { directive, image, year } = Astro.props;
   <div class="container mx-auto mt-[calc(70dvh)] md:mt-[calc(85dvh)]"></div>
   <!-- End: Needed to fix hero space -->
   <Heading text="Gestiones de CICC" />
-  <Timeline id="timeline" />
+  <Timeline currentYear={year} />
 
   <div id="inicio" class="container mx-auto mt-3 mb-24">
     <Directive title=`Comité ${year}` directive={directive} />
