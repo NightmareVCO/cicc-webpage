@@ -1,0 +1,39 @@
+---
+import { DirectiveYearEnum } from "@data/directives.data";
+
+const COMMITTEE_YEAR = Astro.url.pathname.split("/").pop();
+const years = Object.values(DirectiveYearEnum);
+---
+
+<div class="relative flex flex-row-reverse items-center justify-evenly p-10">
+  <div class="absolute inset-0 flex items-center mx-[calc(10%-1rem)]">
+    <div class="relative w-full h-[2px] bg-primary">
+      <div
+        class="absolute -left-[7px] -top-[25px] size-14 bg-white rounded-full flex items-center p-px border-2 border-secondary justify-center"
+      >
+        <div class="size-12 bg-primary rounded-full"></div>
+      </div>
+      <div
+        class="absolute -right-[7px] -top-[25px] size-14 bg-white rounded-full flex items-center p-px border-2 border-secondary justify-center"
+      >
+        <div class="size-12 bg-primary rounded-full"></div>
+      </div>
+    </div>
+  </div>
+  {
+    years.map((year) => (
+      <a
+        href={`/gestiones-pasadas/${year}#comite`}
+        class="transform transition-transform hover:scale-105"
+      >
+        <div class="size-22 bg-white rounded-full flex items-center p-1 border-[3px] border-secondary justify-center">
+          <div
+            class={`size-20 ${COMMITTEE_YEAR === year ? "bg-secondary" : "bg-primary"}  rounded-full flex items-center p-10  justify-center text-white`}
+          >
+            <h3 class="font-semibold text-lg">{year}</h3>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
