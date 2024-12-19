@@ -10,8 +10,6 @@ export function useNavbarItem({ link }: NavbarItemProps) {
   const updateClasses = () => {
     let currentPath = window.location.pathname + window.location.hash;
     setLocation(currentPath);
-    console.log({currentPath});
-    console.log("Current:", link.href);
     const isActive = link.href === currentPath ||
                     (currentPath === "/" && link.href === "/#inicio") ||
                     (currentPath.slice(2) === link.href.slice(2));
