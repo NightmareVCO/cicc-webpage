@@ -11,7 +11,7 @@ interface Props {
 const { activities } = Astro.props;
 ---
 
-<div class="container mx-auto px-4 mt-10">
+<div class="container px-4 mx-auto mt-10">
   {
     activities.map((activity, index) => (
       <FeatureActivity index={index} activity={activity} />

@@ -7,7 +7,7 @@ export default function ResponsiveButton({ isOpen, setIsOpen }: ResponsiveButton
   return (
     <button
       type="button"
-      className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-white transition-transform rounded-lg md:hidden hover:scale-110"
+      className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-white transition-transform rounded-lg lg:hidden hover:scale-110"
       aria-controls="navbar-default"
       aria-expanded={isOpen}
       onClick={() => setIsOpen(!isOpen)}

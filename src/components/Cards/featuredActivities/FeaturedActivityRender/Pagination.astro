@@ -33,7 +33,7 @@ const ITEMS_PER_PAGE = 4;
   const scrollCalc = itemsPerPage * 100;
 
   function showPage(page: number) {
-    const items = document.querySelectorAll(".flex.flex-col.md\\:flex-row");
+    const items = document.querySelectorAll(".flex.flex-col.lg\\:flex-row");
     items.forEach((item, index) => {
       if (index >= page * itemsPerPage && index < (page + 1) * itemsPerPage) {
         (item as HTMLElement).style.display = "flex";

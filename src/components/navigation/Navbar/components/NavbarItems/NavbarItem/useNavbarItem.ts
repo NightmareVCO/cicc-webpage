@@ -20,7 +20,7 @@ export function useNavbarItem({ link }: NavbarItemProps) {
     setAClasses(
       isActive
         ? "block px-3 py-1 transition-colors text-white"
-        : "block px-3 py-1 transition-all hover:text-secondary text-white md:hover:text-secondary md:hover:mt-[-3px]"
+        : "block px-3 py-1 transition-all hover:text-secondary text-white lg:hover:text-secondary lg:hover:mt-[-3px]"
     );
   };
 
