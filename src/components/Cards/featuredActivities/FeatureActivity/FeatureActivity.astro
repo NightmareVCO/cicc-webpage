@@ -20,11 +20,13 @@ const ACTIVITY_LABEL = "Ver actividad";
 >
   <div class="flex flex-col max-w-xl space-y-6">
     <h2
-      class={`text-3xl font-semibold text-primary ${index % 2 === 0 && "md:text-end"} `}
+      class={`text-3xl font-semibold text-primary w-full text-center md:text-start  ${index % 2 === 0 && "md:text-end"} `}
     >
       {activity.title}
     </h2>
-    <p class={`text-lg text-gray-700 ${index % 2 === 0 && "md:text-end"} `}>
+    <p
+      class={`text-lg text-gray-700 w-full text-center md:text-start  ${index % 2 === 0 && "md:text-end"} `}
+    >
       {activity.description}
     </p>
     {
@@ -41,7 +43,7 @@ const ACTIVITY_LABEL = "Ver actividad";
     }
   </div>
   <div
-    class="flex-shrink-0 drop-shadow-lg rounded-2xl border hover:scale-105 transition-transform"
+    class="flex-shrink-0 transition-transform border drop-shadow-lg rounded-2xl hover:scale-105"
   >
     <a target="_blank" rel="noopener noreferrer" href={activity.link}>
       <Image
