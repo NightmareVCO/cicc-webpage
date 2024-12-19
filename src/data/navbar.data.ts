@@ -12,7 +12,8 @@ export const links: Link[] = [
   { href: "/#directiva", text: "Directiva" },
   { href: "/#comite", text: "Comité" },
   { href: "/#preguntas-frecuentes", text: "Preguntas frecuentes" },
-  { href: `/gestiones-pasadas/${LAST_YEAR}`, text: "Gestiones Pasadas" },
+  { href: `/gestiones-pasadas/${LAST_YEAR}#inicio`, text: "Gestiones Pasadas" },
+  { href: "/actividades#inicio", text: "Actividades Destacadas" },
 ];
 
 export default links;
