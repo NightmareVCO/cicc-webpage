@@ -16,19 +16,19 @@ export const activities: Activity[] = [
     link: "https://barcamp.org.do",
   },
   {
+    title: "Taller MLSA 2024",
+    description: "Taller de Microsoft Learn Student Ambassadors en la PUCMM acerca del uso de PowerBI con Python y JupyterNotebooks.",
+    cover: "/activities/mlsa-1-2024.webp",
+    picture: "/activities/mlsa-2-result-2024.webp",
+    link: "https://www.instagram.com/p/DAMQztGxN3C/",
+  },
+  {
     title: "Sesión MLSA 2024",
     description:
       "Microsoft Learn Student Ambassadors es un programa de Microsoft que busca empoderar a los estudiantes para liderar en sus comunidades.",
     cover: "/activities/mlsa-1-2024.webp",
     picture: "/activities/mlsa-1-result-2024.webp",
     link: "https://www.instagram.com/p/C8OJx2ytakn/",
-  },
-  {
-    title: "Taller MLSA 2024",
-    description: "Taller de Microsoft Learn Student Ambassadors en la PUCMM acerca del uso de PowerBI con Python y JupyterNotebooks.",
-    cover: "/activities/mlsa-1-2024.webp",
-    picture: "/activities/mlsa-2-result-2024.webp",
-    link: "https://www.instagram.com/p/DAMQztGxN3C/",
   },
   {
     title: "OpenHouse 2024",
