@@ -1,0 +1,19 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import FeatureActivities from "@components/_Pages/acitivitiesPage/FeatureActivities.astro";
+---
+
+<Layout>
+  <!-- Start: This div allow us to navigate to the top bypassing astro not-scrolling animation -->
+  <div class="sr-only"></div>
+  <!-- End: This div allow us to navigate to the top bypassing astro not-scrolling animation -->
+
+  <Hero />
+  <div
+    id="inicio"
+    class="mt-[calc(70dvh)] md:mt-[calc(85dvh)] container mx-auto"
+  >
+    <FeatureActivities />
+  </div>
+</Layout>

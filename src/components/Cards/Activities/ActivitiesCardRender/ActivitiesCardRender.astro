@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { activities } = Astro.props;
+const MAX_SLIDES = 6;
 ---
 
 <style is:inline>
@@ -35,7 +36,7 @@ const { activities } = Astro.props;
 <div class="w-full h-full swiper">
   <div class="swiper-wrapper">
     {
-      activities.map((activity) => {
+      activities.slice(0, MAX_SLIDES).map((activity) => {
         return <ActivityCard activity={activity} />;
       })
     }

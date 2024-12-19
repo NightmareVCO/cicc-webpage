@@ -2,7 +2,7 @@
 import Heading from "@components/Heading/Heading.astro";
 import ActivitiesCardRender from "@components/Cards/Activities/ActivitiesCardRender/ActivitiesCardRender.astro";
 
-import { activities } from "@data/activities.data";
+import activities from "@data/activities.data";
 
 const ACTIVITY_LABEL = "Ver actividades destacadas";
 ---
@@ -12,9 +12,7 @@ const ACTIVITY_LABEL = "Ver actividades destacadas";
   <ActivitiesCardRender activities={activities} />
   <div class="flex justify-center">
     <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="/actividades"
+      href="/actividades#inicio"
       class="w-fit p-2 px-5 mt-9 mb-4 md:mb-0 text-xl shadow-lg font-medium text-center transition-all rounded-2xl bg-secondary hover:scale-105 hover:bg-secondary/90"
     >
       {ACTIVITY_LABEL}
