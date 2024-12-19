@@ -1,0 +1,13 @@
+---
+import Heading from "@components/Heading/Heading.astro";
+import Pagination from "@components/Cards/featuredActivities/FeaturedActivityRender/Pagination.astro";
+import FeatureActivityRender from "@components/Cards/featuredActivities/FeaturedActivityRender/FeatureActivityRender.astro";
+
+import activities from "@data/activities.data";
+---
+
+<section class="relative">
+  <Heading text="Nuestras Actividades" />
+  <FeatureActivityRender activities={activities} />
+  <Pagination activities={activities} />
+</section>

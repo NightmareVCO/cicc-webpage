@@ -1,0 +1,61 @@
+---
+import type { Activity } from "@data/activities.data";
+
+interface Props {
+  activities: Activity[];
+}
+
+const { activities } = Astro.props;
+
+const ITEMS_PER_PAGE = 4;
+---
+
+<div class="flex justify-center gap-4 my-10">
+  {
+    Array.from({ length: Math.ceil(activities.length / ITEMS_PER_PAGE) }).map(
+      (_, index) => (
+        <button
+          class={`size-10 rounded-full transition-colors ${
+            index === 0 ? "bg-amarillo" : "bg-primary hover:bg-primary/80"
+          }`}
+          data-page={index}
+        >
+          {index + 1}
+        </button>
+      )
+    )
+  }
+</div>
+
+<script>
+  let currentPage = 0;
+  const itemsPerPage = 4;
+  const scrollCalc = itemsPerPage * 100;
+
+  function showPage(page: number) {
+    const items = document.querySelectorAll(".flex.flex-col.md\\:flex-row");
+    items.forEach((item, index) => {
+      if (index >= page * itemsPerPage && index < (page + 1) * itemsPerPage) {
+        (item as HTMLElement).style.display = "flex";
+      } else {
+        (item as HTMLElement).style.display = "none";
+      }
+    });
+
+    document.querySelectorAll("button[data-page]").forEach((btn, idx) => {
+      btn.className = `size-10 rounded-full transition-colors ${
+        idx === page ? "bg-secondary" : "bg-primary hover:bg-primary/80"
+      }`;
+    });
+  }
+
+  document.querySelectorAll("button[data-page]").forEach((button) => {
+    button.addEventListener("click", () => {
+      currentPage = Number(button.getAttribute("data-page"));
+      showPage(currentPage);
+      window.scrollTo({ top: scrollCalc, behavior: "smooth" });
+    });
+  });
+
+  showPage(0);
+</script>

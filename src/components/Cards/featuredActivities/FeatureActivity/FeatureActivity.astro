@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+
+import type { Activity } from "@data/activities.data.ts";
+
+interface Props {
+  activity: Activity;
+  index: number;
+}
+
+const { activity, index } = Astro.props;
+
+const ACTIVITY_LABEL = "Ver actividad";
+---
+
+<div
+  class={`flex flex-col md:flex-row items-center justify-between gap-8 mb-24 ${
+    index % 2 !== 0 ? "md:flex-row-reverse" : ""
+  }`}
+>
+  <div class="flex flex-col max-w-xl space-y-6">
+    <h2
+      class={`text-3xl font-semibold text-primary ${index % 2 === 0 && "text-end"} `}
+    >
+      {activity.title}
+    </h2>
+    <p class={`text-lg text-gray-700 ${index % 2 === 0 && " text-end"} `}>
+      {activity.description}
+    </p>
+    {
+      activity.link && (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={activity.link}
+          class="w-full md:w-[100%] p-2 text-xl font-medium text-center transition-all rounded-2xl bg-primary hover:scale-105 hover:bg-primary/90"
+        >
+          {ACTIVITY_LABEL}
+        </a>
+      )
+    }
+  </div>
+  <div
+    class="flex-shrink-0 drop-shadow-lg rounded-2xl border hover:scale-105 transition-transform"
+  >
+    <a target="_blank" rel="noopener noreferrer" href={activity.link}>
+      <Image
+        class="w-70 h-auto md:w-[520px] md:h-[300px] rounded-2xl"
+        src={activity.picture ?? activity.cover}
+        alt={activity.title}
+        width={520}
+        height={300}
+      />
+    </a>
+  </div>
+</div>
