@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import type { NavbarItemProps } from "./NavbarItem";
 
+import type { NavbarItemProps } from "./NavbarItem";
 
 export function useNavbarItem({ link }: NavbarItemProps) {
   const [liClasses, setLiClasses] = useState("");
@@ -12,7 +12,7 @@ export function useNavbarItem({ link }: NavbarItemProps) {
     setLocation(currentPath);
     const isActive = link.href === currentPath ||
                     (currentPath === "/" && link.href === "/#inicio") ||
-                    (currentPath.slice(2) === link.href.slice(2)); // Compare without leading /#
+                    (currentPath.slice(2) === link.href.slice(2));
 
     setLiClasses(isActive ? "bg-secondary text-white rounded-full shadow" : "");
     setAClasses(

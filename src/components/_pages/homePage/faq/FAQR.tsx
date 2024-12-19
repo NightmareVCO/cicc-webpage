@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import type { Question } from './FAQ.astro';
+
+import type { Question } from '@data/questions.data';
 
 export type FAQProps = {
   questions: Question[];

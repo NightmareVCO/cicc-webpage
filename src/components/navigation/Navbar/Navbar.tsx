@@ -1,9 +1,8 @@
 import NavbarItemsRender from "@components/Navigation/Navbar/components/NavbarItems/NavbarItemsRender/NavbarItemRender";
 import ResponsiveButton from "@components/Navigation/Navbar/components/ResponsiveButton/ResponsiveButton";
-import { links } from '@config/navigationLinks';
 import { useNavbar } from "./useNavbar";
 
-export type { Link } from '@config/navigationLinks';
+import links from '@data/navbar.data';
 
 export default function Navbar() {
   const { navbarRef, isMenuOpen, isSmallScreen, setIsMenuOpen } = useNavbar();

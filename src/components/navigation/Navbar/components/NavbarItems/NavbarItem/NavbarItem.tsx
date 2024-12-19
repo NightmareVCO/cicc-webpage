@@ -1,5 +1,6 @@
-import type { Link } from "@config/navigationLinks";
-import { useNavbarItem } from "./useNavbarItem";
+import { useNavbarItem } from "@components/Navigation/Navbar/components/NavbarItems/NavbarItem/useNavbarItem";
+
+import type { Link } from "@data/navbar.data";
 
 export type NavbarItemProps = {
   link: Link;

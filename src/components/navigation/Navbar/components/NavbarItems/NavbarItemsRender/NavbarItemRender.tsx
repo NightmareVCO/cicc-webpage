@@ -1,5 +1,6 @@
-import type { Link } from "@components/Navigation/Navbar/Navbar";
-import NavbarItem from "@src/components/Navigation/Navbar/components/NavbarItems/NavbarItem/NavbarItem";
+import NavbarItem from "@components/Navigation/Navbar/components/NavbarItems/NavbarItem/NavbarItem";
+
+import type { Link } from "@data/navbar.data";
 
 export type NavbarItemRenderProps = {
   links: Link[];

@@ -12,7 +12,7 @@ export default function ResponsiveButton({ isOpen, setIsOpen }: ResponsiveButton
       aria-expanded={isOpen}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <span className="sr-only">Open main menu</span>
+      <span className="sr-only">Abrir menú principal</span>
       <svg
         className="w-5 h-5"
         aria-hidden="true"
