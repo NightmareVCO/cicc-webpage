@@ -7,7 +7,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 ---
 
 <footer class="bg-slate-100">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+  <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
     <div class="md:flex md:justify-evenly">
       <div class="mb-14 md:mb-0">
         <a
@@ -33,12 +33,12 @@ const CURRENT_YEAR = new Date().getFullYear();
             </div>
             <div>
               <p
-                class="text-center text-lg md:text-3xl font-semibold whitespace-nowrap text-primary"
+                class="text-lg font-semibold text-center md:text-3xl whitespace-nowrap text-primary"
               >
                 <span class="text-secondary">Comité </span>de Estudiantes de
               </p>
               <p
-                class="text-center text-lg md:text-3xl font-semibold whitespace-nowrap text-primary"
+                class="text-lg font-semibold text-center md:text-3xl whitespace-nowrap text-primary"
               >
                 Ingeniería en Ciencias de la
                 <span class="text-secondary">Computación </span>
@@ -51,7 +51,7 @@ const CURRENT_YEAR = new Date().getFullYear();
             href="https://www.instagram.com/ciccpucmm/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-black hover:text-gray-900 ms-5 hover:scale-105 transition-transform"
+            class="text-black transition-transform hover:text-gray-900 ms-5 hover:scale-105"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const CURRENT_YEAR = new Date().getFullYear();
             href="https://www.facebook.com/ciscpucmm"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-black hover:text-gray-900 ms-5 hover:scale-105 transition-transform"
+            class="text-black transition-transform hover:text-gray-900 ms-5 hover:scale-105"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const CURRENT_YEAR = new Date().getFullYear();
             href="https://www.twitter.com/ciccpucmm"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-black hover:text-gray-900 ms-5 hover:scale-105 transition-transform"
+            class="text-black transition-transform hover:text-gray-900 ms-5 hover:scale-105"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -132,12 +132,11 @@ const CURRENT_YEAR = new Date().getFullYear();
             >
             <span class="sr-only">Twitter page</span>
           </a>
-          <!-- linkedin -->
           <a
             href="https://www.linkedin.com/in/ciccpucmm/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-black hover:text-gray-900 ms-5 hover:scale-105 transition-transform"
+            class="text-black transition-transform hover:text-gray-900 ms-5 hover:scale-105"
           >
             <svg
               width="24"
@@ -151,16 +150,61 @@ const CURRENT_YEAR = new Date().getFullYear();
             >
             <span class="sr-only">Linkedin page</span>
           </a>
+          <a
+            href="https://linktr.ee/CICCPUCMM"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-black transition-transform hover:text-gray-900 ms-5 hover:scale-105"
+          >
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 80 97.7"
+              style="enable-background:new 0 0 80 97.7"
+              xml:space="preserve"
+              ><path
+                d="M.2 33.1h24.2L7.1 16.7l9.5-9.6L33 23.8V0h14.2v23.8L63.6 7.1l9.5 9.6L55.8 33H80v13.5H55.7L73 63.2l-9.5 9.4L40 49.1 16.5 72.7 7 63.2l17.3-16.7H0V33.1h.2zm32.9 32.7h14.2v32H33.1v-32z"
+                fill="#0A66C2"
+              >
+              </path>
+            </svg>
+            <span class="sr-only">Linktree page</span>
+          </a>
+          <a
+            href="mailto:cicc-csti@ce.pucmm.edu.do"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-black transition-transform hover:text-gray-900 ms-5 hover:scale-105"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#00589B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span class="sr-only">Email</span>
+          </a>
         </div>
       </div>
       <div class="grid grid-cols-2 gap-4">
         {
           footerSections.map((section) => (
             <div>
-              <h2 class="mb-6 font-bold text-primary uppercase">
+              <h2 class="mb-6 font-bold uppercase text-primary">
                 {section.title}
               </h2>
-              <ul class="text-gray-500 font-medium">
+              <ul class="font-medium text-gray-500">
                 {section.links.map((link) => (
                   <li class="mb-4">
                     <a href={link.href} class="hover:underline">
@@ -174,11 +218,11 @@ const CURRENT_YEAR = new Date().getFullYear();
         }
       </div>
     </div>
-    <hr class="mb-6 mt-2 border-gray-200 sm:mx-auto" />
-    <div class="flex justify-center items-center mb-20 md:mb-0">
+    <hr class="mt-2 mb-6 border-gray-200 sm:mx-auto" />
+    <div class="flex items-center justify-center mb-20 md:mb-0">
       <span class="text-sm text-black sm:text-center"
         >Copyright © {CURRENT_YEAR}
-        <a href="/" class="hover:text-primary transition-colors">CICC</a>.
+        <a href="/" class="transition-colors hover:text-primary">CICC</a>.
       </span>
     </div>
   </div>
