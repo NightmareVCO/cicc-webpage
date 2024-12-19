@@ -3,6 +3,8 @@ export type Link = {
   text: string;
 };
 
+const LAST_YEAR = new Date().getFullYear() - 1;
+
 export const links: Link[] = [
   { href: "/#inicio", text: "Inicio" },
   { href: "/#nosotros", text: "Nosotros" },
@@ -10,5 +12,7 @@ export const links: Link[] = [
   { href: "/#directiva", text: "Directiva" },
   { href: "/#comite", text: "Comité" },
   { href: "/#preguntas-frecuentes", text: "Preguntas frecuentes" },
-  { href: "/gestiones-pasadas", text: "Gestiones Pasadas" },
+  { href: `/gestiones-pasadas/${LAST_YEAR}`, text: "Gestiones Pasadas" },
 ];
+
+export default links;
