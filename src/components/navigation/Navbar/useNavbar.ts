@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 export function useNavbar() {
   const navbarRef = useRef<HTMLElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,26 +21,5 @@ export function useNavbar() {
     };
   }, []);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    mediaQuery.addEventListener("change", () => {
-      if (mediaQuery.matches) {
-        setIsSmallScreen(true);
-      } else {
-        setIsSmallScreen(false);
-      }
-    });
-
-    return () => {
-      mediaQuery.removeEventListener("change", () => {
-        if (mediaQuery.matches) {
-          setIsSmallScreen(true);
-        } else {
-          setIsSmallScreen(false);
-        }
-      });
-    };
-  }, []);
-
-  return { navbarRef, isMenuOpen, isSmallScreen, setIsMenuOpen };
+  return { navbarRef, isMenuOpen, setIsMenuOpen };
 }
