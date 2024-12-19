@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Directive from "@components/_Pages/homePage/directive/Directive.astro";
+import Committee from "@components/_Pages/homePage/committee/Committee.astro";
+import Timeline from "@components/_Pages/committeesPage/Timeline.astro";
+import Heading from "@components/Heading/Heading.astro";
+import {
+  DirectiveYearEnum,
+  directivesImages,
+  directives,
+} from "@data/directives.data";
+
+export const getStaticPaths = () => {
+  return Object.keys(directives).map((year) => ({
+    params: { year },
+    props: {
+      directive: directives[year as DirectiveYearEnum] ?? [],
+      image: directivesImages[year as DirectiveYearEnum] ?? "",
+      year,
+    },
+  }));
+};
+
+const { directive, image, year } = Astro.props;
+---
+
+<Layout>
+  <Hero />
+  <!-- Start: Needed to fix hero space -->
+  <div class="container mx-auto mt-[calc(70dvh)] md:mt-[calc(85dvh)]"></div>
+  <!-- End: Needed to fix hero space -->
+  <Heading text="Gestiones de CICC" />
+  <Timeline id="timeline" />
+
+  <div id="comite" class="container mx-auto mt-3 mb-24">
+    <Directive title=`Comité ${year}` directive={directive} />
+    <div class="mt-12">
+      <Committee image={image} />
+    </div>
+  </div>
+</Layout>

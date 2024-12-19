@@ -1,13 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro";
+
 import Hero from "@components/Hero/Hero.astro";
 import About from "@components/_Pages/homePage/aboutUs/About.astro";
 import Activities from "@components/_Pages/homePage/activities/Activities.astro";
-import ImageDivider from "@components/Divider/ImageDivider.astro";
 import Directive from "@components/_Pages/homePage/directive/Directive.astro";
 import Committee from "@components/_Pages/homePage/committee/Committee.astro";
 import FAQ from "@components/_Pages/homePage/faq/FAQ.astro";
-import directive_2024 from "@data/2024/directive.data";
+import ImageDivider from "@components/Divider/ImageDivider.astro";
+
+import { directive, image } from "@data/homepage.data";
 ---
 
 <Layout>
@@ -30,10 +32,10 @@ import directive_2024 from "@data/2024/directive.data";
     <ImageDivider image="/divider-banner.webp" alt="Divider" />
   </div>
   <div id="directiva" class="container mx-auto mt-3">
-    <Directive title="Directiva" directive={directive_2024} />
+    <Directive title="Directiva" directive={directive} />
   </div>
   <div id="comite" class="container mx-auto mt-3">
-    <Committee image="/hero.webp" title="Miembros" />
+    <Committee image={image} title="Miembros" />
   </div>
   <div class="mt-12 md:mt-28">
     <ImageDivider image="/divider-banner.webp" alt="Divider" />
