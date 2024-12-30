@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import Hero from "@components/Hero/Hero.astro";
+
+return Astro.redirect("/");
+---
+
+<Layout>
+  <!-- Start: This div allow us to navigate to the top bypassing astro not-scrolling animation -->
+  <div id="inicio" class="sr-only"></div>
+  <!-- End: This div allow us to navigate to the top bypassing astro not-scrolling animation -->
+
+  <Hero />
+  <div
+    id="not-found"
+    class="mt-[calc(70dvh)] lg:mt-[calc(80dvh)] container mx-auto"
+  >
+    <h1 class="text-4xl font-bold text-center text-primary">404</h1>
+    <p class="text-center text-primary">
+      La página que buscas no existe. <br />
+      <a href="/" class="text-primary hover:underline">
+        Regresar al inicio
+      </a>
+    </p>
+  </div>
+</Layout>
