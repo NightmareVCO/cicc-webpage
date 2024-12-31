@@ -14,6 +14,17 @@ Para iniciar el proyecto con Docker, debemos tener instalado Docker y Docker Com
 docker-compose up --build
 ```
 
+El proyecto se iniciará en `localhost:4321` en el `container` de Docker. Pero debido a la configuración de Docker, se puede acceder a `localhost:8000` en el navegador.
+
+Esto se puede cambiar modificando el archivo `docker-compose.yml` en la sección de `ports`:
+
+```yml
+ports:
+  - "8000:4321"
+```
+
+Donde el primer valor es el puerto del host y el segundo valor es el puerto del contenedor.
+
 ### Iniciar con NodeJS
 
 Para iniciar el proyecto con NodeJS, debemos tener instalado NodeJS 22 y pnpm.
