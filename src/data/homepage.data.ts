@@ -1,7 +1,7 @@
 import {
   directives,
   directivesImages,
-  DirectiveYearEnum,
+  type DirectiveYearEnum,
 } from "@data/directives.data";
 
 const CURRENT_YEAR = new Date().getFullYear().toString();
