@@ -148,7 +148,7 @@ export const image =
   directivesImages[PREVIOUS_YEAR as DirectiveYearEnum];
 ```
 
-Aquí tenemos dos constantes que nos permiten seleccionar el comité actual o el comité anterior, en caso de que el comité actual no exista. Esto de forma automática, sin necesidad de cambiar el año manualmente.
+Aquí tenemos dos constantes que nos permiten seleccionar el comité actual o el comité anterior en caso de que el comité actual no exista. Esto de forma automática, sin necesidad de cambiar el año manualmente.
 
 Cuando se crea una entrada nueva en el enum `DirectiveYearEnum`, se deben crear las entradas correspondientes en los objetos `directives` y `directivesImages`.
 
