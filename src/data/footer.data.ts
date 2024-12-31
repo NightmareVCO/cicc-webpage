@@ -1,4 +1,11 @@
-export const footerSections = [
+import type { Link }  from "@data/navbar.data";
+
+export type FooterSection = {
+  title: string;
+  links: Link[];
+};
+
+export const footerSections: FooterSection[] = [
   {
     title: "Navegación",
     links: [
