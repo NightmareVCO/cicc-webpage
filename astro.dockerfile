@@ -20,9 +20,7 @@ RUN npm install -g pnpm
 
 WORKDIR /app
 
-COPY --from=builder /app .
-
-RUN pnpm install --prod
+COPY  --from=builder /app .
 
 EXPOSE 4321
 

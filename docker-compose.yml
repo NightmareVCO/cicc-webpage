@@ -6,9 +6,6 @@ services:
       dockerfile: astro.dockerfile
     ports:
       - "8000:4321"
-    volumes:
-      - .:/app
-      - node_modules:/app/node_modules
     environment:
       - HOST=0.0.0.0
     deploy:
