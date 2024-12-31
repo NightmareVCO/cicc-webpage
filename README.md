@@ -128,9 +128,9 @@ Evitando así acceder de forma directa `(directives[0].members)` y tener que rec
 Para acceder a la foto de dicho comité completo se puede acceder mediante el objeto `directivesImages` que contiene la foto de cada comité. Para acceder a las fotos hacemos uso del ya creado `DirectiveYearEnum`:
 
 ```ts
-directivesImages["2025" as DirectiveYearEnum].members;
-directivesImages["2024" as DirectiveYearEnum].members;
-directivesImages["2023" as DirectiveYearEnum].members;
+directivesImages["2025" as DirectiveYearEnum];
+directivesImages["2024" as DirectiveYearEnum];
+directivesImages["2023" as DirectiveYearEnum];
 ```
 
 La selección del comité que se debe mostrar en la homepage se realiza en el archivo `src/data/homepage.data.ts`.
@@ -151,6 +151,8 @@ export const image =
 Aquí tenemos dos constantes que nos permiten seleccionar el comité actual o el comité anterior, en caso de que el comité actual no exista. Esto de forma automática, sin necesidad de cambiar el año manualmente.
 
 Cuando se crea una entrada nueva en el enum `DirectiveYearEnum`, se deben crear las entradas correspondientes en los objetos `directives` y `directivesImages`.
+
+El motivo por el cual se tiene la directiva y la foto por separado es porque el objeto `directives` contiene la información de cada miembro de la directiva, es un arreglo y cada entrada es un miembro exclusivamente y el objeto `directivesImages` contiene la foto de cada comité.
 
 El valor opcional `href` está pensado para agregar el LinkedIn de cada miembro de la directiva.
 
