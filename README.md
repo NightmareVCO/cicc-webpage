@@ -8,10 +8,10 @@ Podemos iniciar el proyecto de forma nativa con NodeJS (requiere NodeJS 22 & pnp
 
 ### Iniciar con Docker
 
-Para iniciar el proyecto con Docker, debemos tener instalado Docker y Docker Compose.
+Para iniciar el proyecto con Docker, debemos tener instalado Docker.
 
 ```sh
-docker-compose up --build
+docker compose up --build
 ```
 
 El proyecto se iniciará en `localhost:4321` en el `container` de Docker. Pero debido a la configuración de Docker, se puede acceder a `localhost:8000` en el navegador.
@@ -176,7 +176,7 @@ Si se ingresa a una ruta que no existe, se redirige a la página de inicio (que 
 
 ### Página de Actividades
 
-En esta página se encuentran las actividades realizadas por el comité. Para agregar se debe agregar la información de la actividad en el anteriormente mencionado archivo `src/data/activities.data.ts`.'
+En esta página se encuentran las actividades realizadas por el comité. Para agregar se debe agregar la información de la actividad en el anteriormente mencionado archivo `src/data/activities.data.ts`.
 
 Aquí es donde para que una actividad se muestre, debemos agregar el valor opcional `picture` para agregar un imagen del evento que se mostrará en la página de actividades destacadas.
 
